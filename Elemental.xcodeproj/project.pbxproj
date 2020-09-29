@@ -13,8 +13,6 @@
 		F87D433521CB83C2005A84F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87D433321CB83C2005A84F0 /* Main.storyboard */; };
 		F87D433721CB83C3005A84F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87D433621CB83C3005A84F0 /* Assets.xcassets */; };
 		F87D433A21CB83C3005A84F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87D433821CB83C3005A84F0 /* LaunchScreen.storyboard */; };
-		F87D434521CB83C3005A84F0 /* ElementalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87D434421CB83C3005A84F0 /* ElementalTests.swift */; };
-		F87D435021CB83C3005A84F0 /* ElementalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87D434F21CB83C3005A84F0 /* ElementalUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +44,7 @@
 		F87D433921CB83C3005A84F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F87D433B21CB83C3005A84F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F87D434021CB83C3005A84F0 /* ElementalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F87D434421CB83C3005A84F0 /* ElementalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementalTests.swift; sourceTree = "<group>"; };
-		F87D434621CB83C3005A84F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F87D434B21CB83C3005A84F0 /* ElementalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElementalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F87D434F21CB83C3005A84F0 /* ElementalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementalUITests.swift; sourceTree = "<group>"; };
-		F87D435121CB83C3005A84F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				F87D432E21CB83C2005A84F0 /* Elemental */,
-				F87D434321CB83C3005A84F0 /* ElementalTests */,
-				F87D434E21CB83C3005A84F0 /* ElementalUITests */,
 				F87D432D21CB83C2005A84F0 /* Products */,
 				47838ED6D083C2D202A92960 /* Pods */,
 				500BBD2D66BE380A061EE194 /* Frameworks */,
@@ -129,24 +121,6 @@
 				F87D433B21CB83C3005A84F0 /* Info.plist */,
 			);
 			path = Elemental;
-			sourceTree = "<group>";
-		};
-		F87D434321CB83C3005A84F0 /* ElementalTests */ = {
-			isa = PBXGroup;
-			children = (
-				F87D434421CB83C3005A84F0 /* ElementalTests.swift */,
-				F87D434621CB83C3005A84F0 /* Info.plist */,
-			);
-			path = ElementalTests;
-			sourceTree = "<group>";
-		};
-		F87D434E21CB83C3005A84F0 /* ElementalUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F87D434F21CB83C3005A84F0 /* ElementalUITests.swift */,
-				F87D435121CB83C3005A84F0 /* Info.plist */,
-			);
-			path = ElementalUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +319,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87D434521CB83C3005A84F0 /* ElementalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87D435021CB83C3005A84F0 /* ElementalUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

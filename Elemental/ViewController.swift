@@ -13,9 +13,8 @@ import SwiftyJSON
 import NVActivityIndicatorView
 import CoreLocation
 
-
 class ViewController: UIViewController, CLLocationManagerDelegate {
-
+    
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var conditionImageView: UIImageView!
@@ -30,26 +29,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var activityIndicator: NVActivityIndicatorView!
     let locationManager = CLLocationManager()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundView.layer.addSublayer(gradientLayer)
-
         let indicatorSize: CGFloat = 70
         let indicatorFrame = CGRect(x: (view.frame.width-indicatorSize)/2, y: (view.frame.height-indicatorSize)/2, width: indicatorSize, height: indicatorSize)
         activityIndicator = NVActivityIndicatorView(frame: indicatorFrame, type: .lineScale, color: UIColor.white, padding: 20.0)
         activityIndicator.backgroundColor = UIColor.black
         view.addSubview(activityIndicator)
-
         locationManager.requestWhenInUseAuthorization()
-
         activityIndicator.startAnimating()
-        if(CLLocationManager.locationServicesEnabled()){
+        if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +66,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 self.locationLabel.text = jsonResponse["name"].stringValue
                 self.conditionImageView.image = UIImage(named: iconName)
                 self.conditionLabel.text = jsonWeather["main"].stringValue
-                self.temperatureLabel.text = "\(Int(round(jsonTemp["temp"].doubleValue)))"
+                self.temperatureLabel.text = String(Int(round(jsonTemp["temp"].doubleValue))) + "°"
                 
                 let date = Date()
                 let dateFormatter = DateFormatter()
@@ -82,8 +76,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 let suffix = iconName.suffix(1)
                 if (suffix == "n") {
                     self.setNightGradientBackground()
-                }
-                else {
+                } else {
                     self.setDayGradientBackground()
                 }
             }
@@ -92,9 +85,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
+        
     }
-
+    
     func setDayGradientBackground() {
         let topColor = UIColor(red: 68.0/255.0, green: 164.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
         let bottomColor = UIColor(red: 118.0/255.0, green: 214.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
@@ -108,5 +101,5 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [topColor, bottomColor]
     }
-
+    
 }
