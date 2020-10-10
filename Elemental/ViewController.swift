@@ -89,15 +89,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func setDayGradientBackground() {
-        let topColor = UIColor(red: 68.0/255.0, green: 164.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
-        let bottomColor = UIColor(red: 118.0/255.0, green: 214.0/255.0, blue: 255.0/255.0, alpha: 1.0).cgColor
+        let topColor = UIColor(red: 31.0/255.0, green: 139.0/255.0, blue: 186.0/255.0, alpha: 1.0).cgColor
+        let bottomColor = UIColor(red: 96.0/255.0, green: 167.0/255.0, blue: 204.0/255.0, alpha: 1.0).cgColor
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [topColor, bottomColor]
     }
     
     func setNightGradientBackground() {
-        let topColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 24.0/255.0, alpha: 1.0).cgColor
-        let bottomColor = UIColor(red: 1.0/255.0, green: 13.0/255.0, blue: 74.0/255.0, alpha: 1.0).cgColor
+        let topColor = UIColor(red: 0.0/255.0, green: 5.0/255.0, blue: 27.0/255.0, alpha: 1.0).cgColor
+        let bottomColor = UIColor(red: 49.0/255.0, green: 57.0/255.0, blue: 85.0/255.0, alpha: 1.0).cgColor
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [topColor, bottomColor]
     }
