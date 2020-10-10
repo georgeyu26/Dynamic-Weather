@@ -15,8 +15,18 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9" translatesAutoresizingMaskIntoConstraints="NO" id="6i9-Mf-Gq6" userLabel="Background Image">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.12156862745098039" green="0.54509803921568623" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6i9-Mf-Gq6" secondAttribute="trailing" id="1pM-ws-2Go"/>
+                            <constraint firstItem="6i9-Mf-Gq6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="4h2-aG-LCd"/>
+                            <constraint firstAttribute="bottom" secondItem="6i9-Mf-Gq6" secondAttribute="bottom" id="Ssg-09-CYC"/>
+                            <constraint firstItem="6i9-Mf-Gq6" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="fpq-Cw-ma5"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +34,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="9" width="5120" height="2880"/>
+    </resources>
 </document>
